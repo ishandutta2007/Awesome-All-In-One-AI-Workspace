@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090D16" />
+      <stop offset="50%" stop-color="#0E1726" />
+      <stop offset="100%" stop-color="#060911" />
+    </linearGradient>
+
+    <!-- Animated Glowing Gradients for Orbs -->
+    <radialGradient id="glow-indigo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.45" />
+      <stop offset="60%" stop-color="#4F46E5" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#4F46E5" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glow-cyan" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.4" />
+      <stop offset="65%" stop-color="#0EA5E9" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="glow-purple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#A855F7" stop-opacity="0.4" />
+      <stop offset="70%" stop-color="#7C3AED" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.3" />
+    </pattern>
+
+    <!-- Title Gradient -->
+    <linearGradient id="title-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="45%" stop-color="#E2E8F0" />
+      <stop offset="70%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#818CF8" />
+    </linearGradient>
+
+    <!-- Badge Gradient -->
+    <linearGradient id="badge-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Drop Shadow for Text -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+
+    <filter id="glow-card" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#4F46E5" flood-opacity="0.25" />
+    </filter>
+
+    <style>
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(-16px) scale(1.04); }
+      }
+      @keyframes floatReverse {
+        0%, 100% { transform: translateY(0px) scale(1); }
+        50% { transform: translateY(14px) scale(0.96); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; }
+        50% { opacity: 0.7; }
+      }
+      @keyframes orbit {
+        0% { transform: rotate(0deg) translateX(40px) rotate(0deg); }
+        100% { transform: rotate(360deg) translateX(40px) rotate(-360deg); }
+      }
+      .anim-float1 {
+        animation: floatSlow 8s ease-in-out infinite;
+      }
+      .anim-float2 {
+        animation: floatReverse 10s ease-in-out infinite;
+      }
+      .anim-pulse {
+        animation: pulseGlow 4s ease-in-out infinite;
+      }
+      .anim-orbit {
+        transform-origin: 1050px 180px;
+        animation: orbit 14s linear infinite;
+      }
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+      }
+      .subtitle-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+      }
+      .pill-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="420" rx="20" fill="url(#bg-grad)" />
+
+  <!-- Grid Overlay -->
+  <rect width="1200" height="420" rx="20" fill="url(#grid)" />
+
+  <!-- Dynamic Ambient Glowing Orbs in Background -->
+  <circle class="anim-float1 anim-pulse" cx="180" cy="110" r="160" fill="url(#glow-indigo)" />
+  <circle class="anim-float2 anim-pulse" cx="1020" cy="150" r="180" fill="url(#glow-cyan)" />
+  <circle class="anim-float1" cx="620" cy="340" r="150" fill="url(#glow-purple)" opacity="0.3" />
+
+  <!-- Subtle Network Graph Connections (Background Tech Accent) -->
+  <g opacity="0.25">
+    <line x1="880" y1="90" x2="980" y2="150" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="4,4" />
+    <line x1="980" y1="150" x2="1080" y2="100" stroke="#818CF8" stroke-width="1.5" />
+    <line x1="980" y1="150" x2="1050" y2="230" stroke="#38BDF8" stroke-width="1.5" stroke-dasharray="3,3" />
+    <line x1="1050" y1="230" x2="1140" y2="210" stroke="#818CF8" stroke-width="1.5" />
+    
+    <circle cx="880" cy="90" r="5" fill="#38BDF8" />
+    <circle cx="980" cy="150" r="7" fill="#818CF8" />
+    <circle cx="1080" cy="100" r="5" fill="#38BDF8" />
+    <circle cx="1050" cy="230" r="6" fill="#A855F7" />
+    <circle cx="1140" cy="210" r="4" fill="#38BDF8" />
+
+    <!-- Left side subtle node cluster -->
+    <line x1="90" y1="260" x2="160" y2="210" stroke="#6366F1" stroke-width="1.5" stroke-dasharray="4,4" />
+    <line x1="160" y1="210" x2="230" y2="270" stroke="#06B6D4" stroke-width="1.5" />
+    <circle cx="90" cy="260" r="4" fill="#6366F1" />
+    <circle cx="160" cy="210" r="6" fill="#38BDF8" />
+    <circle cx="230" cy="270" r="5" fill="#A855F7" />
+  </g>
+
+  <!-- Interactive Orbiting Particle (Dynamic Visual Accent) -->
+  <circle class="anim-orbit" cx="1050" cy="180" r="3.5" fill="#38BDF8" opacity="0.8" />
+
+  <!-- Inner Border Stroke -->
+  <rect x="1" y="1" width="1198" height="418" rx="19" fill="none" stroke="#334155" stroke-opacity="0.4" stroke-width="1.5" />
+
+  <!-- ==================== FOREGROUND CONTENT ==================== -->
+  <!-- Top Category Chip / Pill -->
+  <g transform="translate(60, 52)">
+    <rect width="260" height="32" rx="16" fill="#1E1B4B" stroke="#6366F1" stroke-opacity="0.6" stroke-width="1" />
+    <circle cx="18" cy="16" r="5" fill="#10B981" />
+    <text x="32" y="21" fill="#C7D2FE" class="pill-text" font-size="12">AI WORKSPACE ECOSYSTEM</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="60" y="145" fill="url(#title-grad)" class="title-text" font-size="44" filter="url(#shadow)">
+    Awesome All-In-One AI Workspace
+  </text>
+
+  <!-- Subtitle -->
+  <text x="60" y="195" fill="#94A3B8" class="subtitle-text" font-size="18">
+    Curated Hub of SaaS Platforms &amp; Open-Source Projects for Unified Knowledge, Docs &amp; Autonomous Agents
+  </text>
+
+  <!-- Decorative Horizontal Separator Bar -->
+  <line x1="60" y1="228" x2="1140" y2="228" stroke="#334155" stroke-opacity="0.6" stroke-width="1" />
+
+  <!-- Feature Pills / Highlights (Neatly arranged along bottom, never obscuring text) -->
+  <g transform="translate(60, 260)">
+    <!-- Pill 1: Knowledge Bases -->
+    <g transform="translate(0, 0)">
+      <rect width="250" height="84" rx="12" fill="url(#badge-grad)" stroke="#334155" stroke-width="1" />
+      <rect x="0" y="0" width="4" height="84" rx="2" fill="#38BDF8" />
+      <text x="22" y="32" fill="#38BDF8" class="pill-text">🧠 UNIFIED KNOWLEDGE</text>
+      <text x="22" y="58" fill="#CBD5E1" class="subtitle-text" font-size="13">Docs, canvases &amp; graph wikis</text>
+    </g>
+
+    <!-- Pill 2: Autonomous Agents -->
+    <g transform="translate(275, 0)">
+      <rect width="250" height="84" rx="12" fill="url(#badge-grad)" stroke="#334155" stroke-width="1" />
+      <rect x="0" y="0" width="4" height="84" rx="2" fill="#818CF8" />
+      <text x="22" y="32" fill="#818CF8" class="pill-text">🤖 AUTONOMOUS AGENTS</text>
+      <text x="22" y="58" fill="#CBD5E1" class="subtitle-text" font-size="13">AI coworkers &amp; automations</text>
+    </g>
+
+    <!-- Pill 3: Local-First & Privacy -->
+    <g transform="translate(550, 0)">
+      <rect width="250" height="84" rx="12" fill="url(#badge-grad)" stroke="#334155" stroke-width="1" />
+      <rect x="0" y="0" width="4" height="84" rx="2" fill="#A855F7" />
+      <text x="22" y="32" fill="#A855F7" class="pill-text">🛡️ LOCAL-FIRST &amp; PRIVACY</text>
+      <text x="22" y="58" fill="#CBD5E1" class="subtitle-text" font-size="13">Self-hostable, zero telemetry</text>
+    </g>
+
+    <!-- Pill 4: Open Ecosystem -->
+    <g transform="translate(825, 0)">
+      <rect width="255" height="84" rx="12" fill="url(#badge-grad)" stroke="#334155" stroke-width="1" />
+      <rect x="0" y="0" width="4" height="84" rx="2" fill="#10B981" />
+      <text x="22" y="32" fill="#10B981" class="pill-text">⚡ OPEN-SOURCE LEADERBOARD</text>
+      <text x="22" y="58" fill="#CBD5E1" class="subtitle-text" font-size="13">Ranked by GitHub stars</text>
+    </g>
+  </g>
+
+  <!-- Bottom Brand Footnote -->
+  <text x="60" y="388" fill="#64748B" class="subtitle-text" font-size="12">
+    Maintained with ❤️ by @ishandutta2007 • Updated for 2026 AI Ecosystem
+  </text>
+</svg>
