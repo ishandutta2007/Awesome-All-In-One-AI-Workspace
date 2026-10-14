@@ -69,7 +69,7 @@ The following leading hosted solutions represent category benchmarks in unified 
 
 Curated open-source repositories powering sovereign, self-hosted, and transparent AI workspaces.
 
-> *Repositories are ordered strictly in **descending order by GitHub star count**.*
+> *Repositories are ordered strictly in **descending order by GitHub Stars_Count**.*
 
 - **[n8n](https://github.com/n8n-io/n8n)** [![Stars](https://img.shields.io/github/stars/n8n-io/n8n?style=social&color=white)](https://github.com/n8n-io/n8n/stargazers)  
   ⚡ *Fair-code workflow automation and multi-agent coordination platform.* Connects over 400+ services, native LangChain nodes, and autonomous agent execution loops to automate complex business and workspace operations with full self-hosting freedom.
@@ -177,7 +177,7 @@ We actively welcome community contributions to keep this ecosystem comprehensive
 1. 🍴 **Fork the repository** on GitHub.
 2. 🌿 **Create a new branch** (`git checkout -b feature/add-new-tool`).
 3. 📝 **Add or update the platform** in `README.md`:
-   - Follow the established formatting conventions (include company scale, precise starting pricing, specific free tier limits, and live star count badges).
+   - Follow the established formatting conventions (include company scale, precise starting pricing, specific free tier limits, and live Stars_Count badges).
    - Ensure open-source entries link directly to their stargazers page badge.
 4. 🚀 **Submit a Pull Request** with a concise description of why the tool adds value to the ecosystem.
 
